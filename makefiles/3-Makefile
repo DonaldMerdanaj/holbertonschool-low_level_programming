@@ -8,7 +8,7 @@ all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 clean:
-	${RM} *~ *.tmp ${NAME}
+	${RM} -f *~ ${NAME}
 oclean:
 	${RM} ${OBJ}
 fclean:
