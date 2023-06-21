@@ -13,5 +13,4 @@ oclean:
 	${RM} ${OBJ}
 fclean:
 	${RM} *~ *.tmp ${NAME} ${OBJ}
-re:
-	oclean all
+re: oclean all
