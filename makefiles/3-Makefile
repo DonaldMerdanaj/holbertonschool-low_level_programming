@@ -10,7 +10,7 @@ all: ${OBJ}
 clean:
 	${RM} -f *~ ${NAME}
 oclean:
-	${RM} ${OBJ}
+	${RM} -f ${OBJ}
 fclean:
-	${RM} *~ *.tmp ${NAME} ${OBJ}
+	${RM} -f *~ *.tmp ${NAME} ${OBJ}
 re: oclean all
