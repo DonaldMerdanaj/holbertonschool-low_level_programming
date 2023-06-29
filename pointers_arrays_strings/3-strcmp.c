@@ -10,7 +10,7 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i;
-	
+
 	for (i = 0; i < (int) strlen(s1); i++)
 	{
 		if (s1[i] - s2[i] != 0)
