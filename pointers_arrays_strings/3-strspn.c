@@ -1,21 +1,35 @@
 #include "main.h"
 #include <string.h>
+
 /**
- *_strcmp -  function that copies a string
- *@s1: first string to be compared
- *@s2: string to be compared with s1
- *Return: returns an integer indicating the result of the
- *comparison
-*/
-int _strcmp(char *s1, char *s2)
+ * _strspn - function that gets the length of a prefix substring
+ *@s: string to be searched
+ *@accept: characters to be matched
+ *Return: the number of bytes in the initial segment s which consist only
+ * of bytes from accept
+ */
+
+unsigned int _strspn(char *s, char *accept)
 {
-	int i;
-	
-	for (i = 0; i < (int) strlen(s1); i++)
+	unsigned int i, j;
+	int found;
+
+	for (i = 0; i < (unsigned int) strlen(s); i++)
 	{
-		if (s1[i] - s2[i] != 0)
-			return (s1[i] - s2[i]);
+		found = 0;
+
+		for (j = 0; j < (unsigned int) strlen(accept); j++)
+		{
+			if (s[i] == accept[j])
+			{
+				found = 1;
+				break;
+			}
+		}
+		if (!found)
+			return (i);
+
 	}
-	return (0);
+	return (i);
 
 }
